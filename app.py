@@ -14,6 +14,12 @@ MODEL_FILE = "bilstm_emotion_model.h5"
 TOKENIZER_FILE = "tokenizer (1).pkl"
 LABEL_ENCODER_FILE = "label_encoder.pkl"
 MAX_LEN_FILE = "max_len.pkl"
+emotion_emojis = {
+    "Happy": "😄",
+    "Sad": "😢",
+    "Angry": "😡",
+    "Fear": "😨"
+}
 
 # -------------------------
 # Text cleaning
@@ -95,7 +101,8 @@ try:
                 user_text, model, tokenizer, label_encoder, max_len
             )
 
-            st.success(f"Predicted Emotion: **{label}**")
+            emoji = emotion_emojis.get(label, "")
+            st.success(f"Predicted Emotion: **{label} {emoji}**")
             st.info(f"Confidence: **{confidence:.2%}**")
 
             st.markdown("### Cleaned Text")
