@@ -84,7 +84,7 @@ try:
 
     user_text = st.text_area(
         "Enter text",
-        placeholder="Type something like: I am feeling very happy today"
+        placeholder="Type something like: I am feeling very happy today(make a sentence)"
     )
 
     if st.button("Predict Emotion"):
