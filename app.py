@@ -11,7 +11,7 @@ st.set_page_config(page_title="Emotion Detection", page_icon="😊", layout="cen
 # File paths
 # -------------------------
 MODEL_FILE = "bilstm_emotion_model.h5"
-TOKENIZER_FILE = "tokenizer.pkl"
+TOKENIZER_FILE = "tokenizer(1).pkl"
 LABEL_ENCODER_FILE = "label_encoder.pkl"
 MAX_LEN_FILE = "max_len.pkl"
 
